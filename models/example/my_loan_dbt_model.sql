@@ -58,7 +58,7 @@ with
                 input => record_content:operation.loan.balanceoperations
             ) as bo
         where
-            inserted_at > '{{ var("start_date") }}'
+            inserted_at > {{ var("start_date") }}
             and inserted_at <= current_timestamp()
             and nvl(try_to_number(record_content:operation:loan:id::varchar, 15, 0), 0)
             > 0
