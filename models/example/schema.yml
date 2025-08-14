@@ -1,4 +1,3 @@
-
 version: 2
 
 models:
@@ -19,3 +18,18 @@ models:
             tests:
                 - unique
                 - not_null
+
+    - name: my_third_dbt_model
+      description: "A starter dbt model"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+
+vars:
+  # Analysis date range - used for filtering transaction data  
+  start_date: '2025-05-01 00:00:00.000'  
+  end_date: '2025-08-01 00:00:00.000'    
+  

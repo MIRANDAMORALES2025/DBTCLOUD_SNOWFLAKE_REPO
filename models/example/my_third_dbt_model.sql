@@ -11,17 +11,12 @@
 
 with source_data as (
 
-    select 1 as id
-    union all
-    select 2 as id
-
+     select NAME AS NAME, LAST_NAME LAST_NAME FROM DATABASE_DBT.DBT_MMORALES.TA_CUSTOMER
+   
 )
 
 select *
 from source_data
 
-/*
-    Uncomment the line below to remove records with null `id` values
-*/
 
--- where id is not null
+
